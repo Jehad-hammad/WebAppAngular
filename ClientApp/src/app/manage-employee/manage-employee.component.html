@@ -1,0 +1,16 @@
+<app-nav-menu></app-nav-menu>
+<div class="sidebar">
+  <header translate>Title</header>
+  <ul>
+    <li ><a routerLink="AddEmployee"><i class="material-icons">add</i>{{'SlideItem1' |translate }}</a></li>
+    <li ><a routerLink="DeleteEmployee"><i class="material-icons">delete_sweep</i>{{'SlideItem2' |translate }}</a></li>
+    <li ><a routerLink="EmployeeRecords"><i class="material-icons">folder_shared</i>{{'SlideItem3' |translate }}</a></li>
+  </ul>
+</div>
+
+<div id="section">
+  
+  <router-outlet></router-outlet>
+
+</div>
+

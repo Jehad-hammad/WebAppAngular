@@ -1,0 +1,30 @@
+
+<h1> ASsign Task</h1>
+<hr />
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="TaskID" formControlName="TaskId" [(ngModel)]="TaskId" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Select Employee</mat-label>
+      <mat-select formControlName="EmployeeId">
+
+        <mat-option *ngFor="let arr of empolyeeList" [value]="arr.id">{{arr.nameEn}}</mat-option>
+
+      </mat-select>
+
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" id="registButton" (click)="onSave(form)" [disabled]="form.invalid">Save</button>
+      <button mat-raised-button color="warn" id="registButton" (click)="OnClose()">Cancel</button>
+
+
+    </div>
+
+
+
+  </form>
+
+    

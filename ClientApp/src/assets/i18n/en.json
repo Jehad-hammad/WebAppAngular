@@ -1,0 +1,30 @@
+{
+  "NavBarItem1": "Task",
+  "NavBarItem2": "Employee",
+  "NavBarItem3": "Language",
+  "Title": "Manage Employee",
+  "Title1": "Manage Task",
+  "SlideItem1": "Add Employee",
+  "SlideItem2": "Delete Employee",
+  "SlideItem3": "Recordes of Employee",
+  "SlideItem4": "Add Task",
+  "SlideItem5": "Delete Task",
+  "SlideItem6": "Task Records",
+  "SlideItem7": "Assign Task",
+  "SlideItem8": "Task Information",
+  "page1": "Add Employee",
+  "page2": "Delete Employee",
+  "page3": "Employee Records",
+  "page4": "Add Task",
+  "page5": "Edit & Delete Task",
+  "page6": "Task Records",
+  "page7": "Assign Task",
+  "page8": "Task Information",
+  "page9": "Edit Task "
+
+
+
+
+
+
+}

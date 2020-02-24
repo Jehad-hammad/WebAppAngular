@@ -1,0 +1,40 @@
+#home {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animat 15s ease-in-out infinite;
+  background-size: cover;
+  text-align: center;
+  }
+
+@keyframes animat {
+  0%,100% {
+    background-image: url(../../assets/Images/Employee-Management-Software.jpg);
+  }
+
+  25% {
+    background-image: url(../../assets/Images/Employee-management.jpg);
+  }
+
+  50% {
+    background-image: url(../../assets/Images/met.jpg);
+  }
+
+  750% {
+    background-image: url(../../assets/Images/meeting.jpg);
+  }
+}
+h1 {
+  color: #34a48b;
+}
+
+#btn1{
+  font-size:20px;
+  
+  margin:10px;
+  border-radius:8px;
+  width:200px;
+  transform:translate(-20%,900%);
+}

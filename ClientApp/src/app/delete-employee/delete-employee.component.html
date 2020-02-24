@@ -1,0 +1,53 @@
+
+<h1 translate>page2 </h1>
+<hr />
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!--Employee name Column -->
+  <ng-container matColumnDef="nameInEnglish">
+    <th mat-header-cell *matHeaderCellDef> Name in English </th>
+    <td mat-cell *matCellDef="let element"> {{element.nameEn}} </td>
+  </ng-container>
+
+  <!-- employee name in arabic Column -->
+  <ng-container matColumnDef="nameInArabic">
+    <th mat-header-cell *matHeaderCellDef> Name in Arabic </th>
+    <td mat-cell *matCellDef="let element"> {{element.nameAr}} </td>
+  </ng-container>
+
+  <!-- employee numbver Column -->
+  <ng-container matColumnDef="employeeNumber">
+    <th mat-header-cell *matHeaderCellDef> Employee Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.empNo}} </td>
+  </ng-container>
+  <!-- employee hiring date  Column -->
+  <ng-container matColumnDef="hiringDate">
+    <th mat-header-cell *matHeaderCellDef> Hiring Date </th>
+    <td mat-cell *matCellDef="let element"> {{element.hiringDate  | date}} </td>
+  </ng-container>
+  <!-- employee delete button  Column -->
+  <ng-container matColumnDef="Action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-mini-fab color="warn" (click)="OnDelete(element.id)">
+        <i class="material-icons">
+          delete_forever
+        </i>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

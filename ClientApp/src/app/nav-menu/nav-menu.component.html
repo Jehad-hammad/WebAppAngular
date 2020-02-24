@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <div class="logo"><a routerLink=""><h4> STS </h4></a></div>
+    <ul class="nav-links">
+      <li><a routerLink="/ManageTask/AddTask">{{'NavBarItem1' | translate}}</a></li>
+      <li><a routerLink="/ManageEmployee/AddEmployee">{{'NavBarItem2' | translate}}</a></li>
+      <li><a >{{'NavBarItem3' | translate}}</a>
+      <ul class="subMenu">
+        <li><a (click)="switchLanguage('ar')">Arabic</a></li>
+        <li><a (click)="switchLanguage('en')">English</a></li>
+      </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

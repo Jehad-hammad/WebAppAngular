@@ -1,0 +1,32 @@
+<section id="regist">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-ms-12">
+        <h1 translate>page4</h1>
+        <form [formGroup]="form">
+          <mat-form-field class="inputs">
+            <input matInput placeholder="Task Name in English" formControlName="NameEn">
+
+          </mat-form-field><br />
+          <mat-form-field class="inputs">
+            <input matInput placeholder="Task Name in Arbic " formControlName="NameAr">
+          </mat-form-field><br />
+
+          <mat-form-field class="inputs">
+            <input matInput [matDatepicker]="picker" placeholder="Created Date" formControlName="CreatedDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+
+          </mat-form-field><br />
+
+          <mat-form-field class="inputs">
+            <input matInput placeholder="Stauts " formControlName="Status">
+          </mat-form-field>
+          <button mat-flat-button color="primary" id="registButton" (click)="onSubmit(form)" [disabled]="form.invalid">Submit</button>
+          <button mat-flat-button color="warn" id="registButton" type="reset">Reset</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

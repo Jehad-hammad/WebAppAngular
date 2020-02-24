@@ -1,0 +1,41 @@
+<h1 translate>page8</h1>
+<hr />
+
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search">
+</mat-form-field>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+
+  <!-- Employee Name Column-->
+  <ng-container matColumnDef="empName">
+    <th mat-header-cell *matHeaderCellDef> Employee Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.empName}} </td>
+  </ng-container>
+
+  <!-- Task Name in  Column-->
+  <ng-container matColumnDef="taskName">
+    <th mat-header-cell *matHeaderCellDef> Task Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.taskName}} </td>
+  </ng-container>
+
+  <!-- Task status Column-->
+  <ng-container matColumnDef="taskStatus">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.taskStatus}} </td>
+  </ng-container>
+
+  <!--Task created date Column-->
+  <ng-container matColumnDef="taskCreated">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Creating date </th>
+    <td mat-cell *matCellDef="let element"> {{element.taskCreated  | date}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+      

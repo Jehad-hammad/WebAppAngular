@@ -1,0 +1,23 @@
+<h1 translate>page9</h1>
+<hr />
+<form [formGroup]="form">
+  <mat-form-field>
+    <input matInput placeholder="ID" formControlName="Id"  type="number"  [(ngModel)]="Id" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Task Name in English" formControlName="NameEn" [(ngModel)]="NameEn">
+
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Task Name in Arbic " formControlName="NameAr"[(ngModel)]="NameAr">
+  </mat-form-field>
+
+  
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Stauts " formControlName="Status" [(ngModel)]="Status">
+  </mat-form-field>
+  <button mat-flat-button color="primary" id="registButton" (click)="onSubmit(Id,form)" >Save Changes</button>
+  <button mat-flat-button color="warn" id="registButton" (click)="OnClose()">Close</button>
+
+</form>

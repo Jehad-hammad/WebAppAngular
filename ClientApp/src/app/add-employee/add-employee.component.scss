@@ -1,0 +1,40 @@
+#content {
+  background-image: url(../../assets/Images/Addemployee.jpg);
+}
+#regist {
+  width: 30%;
+  height: 85%;
+  max-height: 100%;
+  background-image: url(../../assets/Images/Addemployee.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#regist h1 {
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+#registButton {
+  width: 55%;
+  border-radius: 10px;
+  margin: 10px auto;
+  display: block;
+  font-family: monospace;
+  font-size: 16px;
+}
+.example-full-width{
+  display:block;
+  
+  
+}
+.inputs{
+  width:50%
+}
